@@ -1,0 +1,240 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-size: 1vw;
+    font-weight: 300;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/************************ Header Style ********************/
+/**********************************************************/
+/**********************************************************/
+
+header {
+    box-shadow: 0px 9vh 20px grey;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 8%;
+    padding-right: 8%;
+    height: 60%;
+    background: linear-gradient(rgb(73, 138, 220), rgb(98, 59, 156));
+}
+
+/************ logo-and-location Style ***********/
+
+.logo-and-location_div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 330%;
+    font-family: sans-serif;
+    font-weight: 100;
+    margin-bottom: 1%;
+}
+
+h3 {
+    color: rgb(39, 35, 134);
+    font-size: 205%;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    opacity: 0.8;
+    font-weight: bold;
+    margin-bottom: 4%;
+}
+
+.location_description_div {
+    display: flex;
+    width: 100%;
+    height: 2.5vw;
+    
+}
+
+.location_description_div p {
+    color: #FFF;
+    font-size: 150%;
+    letter-spacing: 1px;
+    margin-right: 4%;
+}
+
+.text_input_div {
+    height: 2vw;
+    width: 30vw;
+    display: flex;
+    
+    align-items: center;
+}
+.text_input_box {
+    border: none;
+    width: 70%;
+    height: 2vw;
+    font-size: 100%;
+    margin-right: 5%;
+    color: #dde3eb;
+    padding-left: 5%;
+    background-color: rgb(39, 35, 134);
+}
+
+button {
+    background-color: #8498dd;
+    border: none;
+    height: 2vw;
+    width: 20%;
+    color: #FFF;
+    font-size: 100%;
+    letter-spacing: 1px;
+}
+
+/************ weather details Style ***********/
+
+.weather-stats_div {
+    display: flex;
+    font-family: cursive;
+}
+
+.curr_time_header_div {
+    margin-left: 6%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.curr_time_header_div p {
+    text-align: center;
+    font-size: 170%;
+    color: aliceblue;
+    letter-spacing: 1px;
+}
+
+.header_skyStatus_div_tablet {
+    display: none;
+}
+
+.header_skyStatus_div {
+    text-align: center;
+    width: 30%;
+}
+
+.header_skyStatus_div img{
+    width: 100%;
+}
+
+.degree_text_header{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-align: center;
+    margin-left: 5%;
+    padding-top: 2%;
+    font-size: 700%;
+    color: aliceblue;
+}
+
+.degree_text_header_hr {
+    display: none;
+}
+
+.current_p {
+    margin-bottom: 5%;
+}
+
+/************ map Style ***********/
+
+.map_div_tablet {
+    display: none;
+}
+.map_div {
+    position: relative;
+    margin-top: 1%;
+    width: 24vw;
+    height: 24vw;
+    float: right;
+    
+}
+
+#doppler_img1 {
+    filter: grayscale(100%);
+}
+.map_div img{
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+#up_icon {
+    display: none;
+}
+
+/************************ Main Style ********************/
+/**********************************************************/
+/**********************************************************/
+
+main {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 100;
+    height: 40%;
+    opacity: 0.8;
+    display: flex;
+    background-color: rgb(253, 253, 253);
+    
+}
+
+#down_icon {
+    display: none;
+}
+
+.hours_stats_div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4%;
+    justify-content: space-between;
+}
+
+.hours_text {
+    margin-top: 8%;
+    font-size: 200%;
+    text-align: center;
+}
+.hours_sky_img_div {
+    display: flex;
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+.hours_sky_img_div img{
+    width: 100%;
+}
+
+.hours_temperature {
+    text-align: center;
+    margin-left: 5%;
+    padding-top: 2%;
+    font-size: 500%;
+}
+
+hr {
+    color: black;
+    margin-top: 2%;
+    opacity: 0.6;
+}
+
