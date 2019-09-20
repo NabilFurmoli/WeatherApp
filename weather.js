@@ -157,47 +157,47 @@ function validateSkyStatus(arrayOfHours_fullStatus) {
   let validateIcons = function(sky_status) {
     switch (sky_status) {
       case "01d":
-        content.src = "../assets/clearsky.svg";
+        content.src = "./assets/clearsky.svg";
         break;
       case "01n":
-        content.src = "../assets/clear-night.svg";
+        content.src = "./assets/clear-night.svg";
         break;
       case "02d":
-        content.src = "../assets/fewclouds-day.svg";
+        content.src = "./assets/fewclouds-day.svg";
         break;
       case "02n":
-        content.src = "../assets/fewclouds-night.svg";
+        content.src = "./assets/fewclouds-night.svg";
         break;
       case "03d":
       case "03n":
-        content.src = "../assets/scatteredclouds.svg";
+        content.src = "./assets/scatteredclouds.svg";
         break;
       case "04d":
       case "04n":
-        content.src = "../assets/brokencloud.svg";
+        content.src = "./assets/brokencloud.svg";
         break;
       case "09d":
       case "09n":
-        content.src = "../assets/showerrain.svg";
+        content.src = "./assets/showerrain.svg";
         break;
       case "10d":
-        content.src = "../assets/rain-day.svg";
+        content.src = "./assets/rain-day.svg";
         break;
       case "10n":
-        content.src = "../assets/rain-night.svg";
+        content.src = "./assets/rain-night.svg";
         break;
       case "11d":
       case "11n":
       case "10d":
-        content.src = "../assets/thunderstorms.svg";
+        content.src = "./assets/thunderstorms.svg";
         break;
       case "13d":
       case "13n":
-        content.src = "../assets/snow.svg";
+        content.src = "./assets/snow.svg";
         break;
       case "50d":
       case "50n":
-        content.src = "../assets/mist.svg";
+        content.src = "./assets/mist.svg";
         break;
       default:
         console.log("Error: Icon not found");
