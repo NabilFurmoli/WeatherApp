@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--  -->
+    <meta charset="UTF-8" />
+    <title>Quick Weather</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:300"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,500"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="weather.css" />
+    <link rel="stylesheet" type="text/css" href="weather_queries.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header id="sliderHeader" class="sliderheader">
+      <div class="map_div" id="map_img_container_id">
+        <img
+          src="../assets/fakeweather.PNG"
+          id="doppler_img1"
+          alt="fake_weather"
+        />
+      </div>
+
+      <div class="logo-and-location_div">
+        <h1><span>Local Weather</span> Six Hour Forecast</h1>
+        <h3>Northern California with doppler radar</h3>
+
+        <div class="location_description_div">
+          <p>Forcast for</p>
+          <div class="text_input_div">
+            <input
+              type="search"
+              id="search_city"
+              placeholder="Search..."
+              class="text_input_box"
+            />
+            <button onclick="makeCorsRequest()">submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-stats_div">
+        <div class="header_skyStatus_div_tablet">
+          <img
+            id="current_img_id_tablet"
+            src="../assets/fewclouds-day.svg"
+            alt="tablet_defoult_sky_stats_img"
+          />
+        </div>
+
+        <div class="curr_time_header_div">
+          <p class="current_p">Current</p>
+          <p id="current_time_id">12PM</p>
+        </div>
+
+        <div class="header_skyStatus_div">
+          <img src="../assets/fewclouds-day.svg" id="current_img_id" alt="defoult_sky_stats_img" />
+        </div>
+        <hr class="degree_text_header_hr" />
+        <div class="degree_text_header">
+          <p id="curr_temp_text_id">77</p>
+        </div>
+      </div>
+
+      <div class="map_div_tablet" id="tablet_map_img_container_id">
+        <img
+          id="green_map_tablet_img_id"
+          src="../assets/fakeweather.PNG"
+          alt="green_map"
+        />
+      </div>
+
+      <i
+        id="up_icon"
+        class="fas fa-arrow-circle-up"
+        onclick="mobileTransition()"
+      ></i>
+    </header>
+
+    <main id="sliderMain" class="slidermain close">
+      <i
+        id="down_icon"
+        class="fas fa-arrow-circle-down"
+        onclick="mobileTransition()"
+      ></i>
+
+      <div class="hours_stats_div">
+        <p id="current_time_+1_id" class="hours_text">1:00 pm</p>
+        <div class="hours_sky_img_div">
+          <img
+            id="sky_status_+1_id"
+            src="../assets/scatteredclouds.svg"
+            alt="sky_stat_1"
+          />
+        </div>
+        <p id="hour_+1_temp_id" class="hours_temperature">67</p>
+      </div>
+
+      <hr />
+
+      <div class="hours_stats_div">
+        <p id="current_time_+2_id" class="hours_text">2:00 pm</p>
+        <div class="hours_sky_img_div">
+          <img
+            id="sky_status_+2_id"
+            src="../assets/rain-day.svg"
+            alt="sky_stat_2"
+          />
+        </div>
+        <p id="hour_+2_temp_id" class="hours_temperature">68</p>
+      </div>
+
+      <hr />
+
+      <div class="hours_stats_div">
+        <p id="current_time_+3_id" class="hours_text">3:00 pm</p>
+        <div class="hours_sky_img_div">
+          <img
+            id="sky_status_+3_id"
+            src="../assets/fewclouds-day.svg"
+            alt="sky_stat_3"
+          />
+        </div>
+        <p id="hour_+3_temp_id" class="hours_temperature">70</p>
+      </div>
+
+      <hr />
+
+      <div class="hours_stats_div">
+        <p id="current_time_+4_id" class="hours_text">4:00 pm</p>
+        <div class="hours_sky_img_div">
+          <img
+            id="sky_status_+4_id"
+            src="../assets/clearsky.svg"
+            alt="sky_stat_4"
+          />
+        </div>
+        <p id="hour_+4_temp_id" class="hours_temperature">70</p>
+      </div>
+
+      <hr />
+
+      <div class="hours_stats_div">
+        <p id="current_time_+5_id" class="hours_text">5:00 pm</p>
+        <div class="hours_sky_img_div">
+          <img
+            id="sky_status_+5_id"
+            src="../assets/clearsky.svg"
+            alt="sky_stat_5"
+          />
+        </div>
+        <p id="hour_+5_temp_id" class="hours_temperature">71'</p>
+      </div>
+    </main>
+
+    <script src="weather.js"></script>
+  </body>
+</html>
