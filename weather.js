@@ -15,13 +15,13 @@ function makeCorsRequest() {
   let city_name = document.getElementById("search_city").value;
 
   if (city_name === "") {
-    url =
-      "http://api.openweathermap.org/data/2.5/forecast/hourly?q=Davis,CA,US&units=imperial&APPID=f6e80ec13a2fdb65b7a01b126cf2ea5b";
+    url = "http://api.openweathermap.org/data/2.5/forecast?q=Davis,CA,US&units=imperial&APPID=a2fe98634e0dc2691fd866d259db0e4c";
+      //"http://api.openweathermap.org/data/2.5/forecast/hourly?q=Davis,CA,US&units=imperial&APPID=a2fe98634e0dc2691fd866d259db0e4c";
   } else {
     url =
-      "http://api.openweathermap.org/data/2.5/forecast/hourly?q=" +
+      "http://api.openweathermap.org/data/2.5/forecast?q=" +
       city_name +
-      "&units=imperial&APPID=f6e80ec13a2fdb65b7a01b126cf2ea5b";
+      "&units=imperial&APPID=a2fe98634e0dc2691fd866d259db0e4c";
   }
 
   let xhr = createCORSRequest("GET", url);
@@ -35,15 +35,15 @@ function makeCorsRequest() {
   // Load some functions into response handlers.
   xhr.onload = function() {
     let object = JSON.parse(xhr.responseText);
-    if (
-      object.city.coord.lat > 40.6 ||
-      object.city.coord.lat < 36.5 ||
-      object.city.coord.long > 123.5 ||
-      object.city.coord.long < 199.5
-    ) {
-      alert("City out of 150 miles radius.");
-      return;
-    }
+    // if (
+    //   object.city.coord.lat > 40.6 ||
+    //   object.city.coord.lat < 36.5 ||
+    //   object.city.coord.long > 123.5 ||
+    //   object.city.coord.long < 199.5
+    // ) {
+    //   alert("City out of 150 miles radius.");
+    //   return;
+    // }
 
     submit(xhr.responseText);
   };
